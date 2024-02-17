@@ -1,8 +1,8 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
+
+import { Button, Form, Input } from 'antd';
 
 import styles from './signup.module.scss';
-import { Button, Form, Input, Label } from 'reactstrap';
-import Link from 'next/link';
 
 const SignupPage = () => {
   return (
@@ -10,18 +10,21 @@ const SignupPage = () => {
       <Form>
         <h1>Sign up</h1>
 
-        <Label for='email'>Nom</Label>
-        <Input placeholder='Entrez votre nom...' />
+        <Form.Item label='Nom'>
+          <Input placeholder='Entrez votre nom...' />
+        </Form.Item>
 
-        <Label for='email'>Email</Label>
-        <Input placeholder='Entrez votre addresse mail...' />
+        <Form.Item label='Email'>
+          <Input placeholder='Entrez votre addresse mail...' />
+        </Form.Item>
 
-        <Label for='email'>Mot de passe</Label>
-        <Input placeholder='Entrez votre mot de passe...' />
+        <Form.Item label='Mot de passe'>
+          <Input placeholder='Entrez votre mot de passe...' />
+        </Form.Item>
 
-        <Button>Créer un compte</Button>
+        <Button type='secondary'>Créer un compte</Button>
         <p>
-          Déjà inscrit?<Link href='/login'> Se connecter</Link>
+          Déjà inscrit?<Link to='/login'> Se connecter</Link>
         </p>
       </Form>
     </div>

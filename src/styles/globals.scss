@@ -24,6 +24,7 @@ label {
   color: #575254 !important;
   margin: 0 !important;
   font-size: 12px !important;
+  padding: 0 !important;
 }
 
 // Form
@@ -41,6 +42,10 @@ label {
   label {
     height: auto !important;
   }
+}
+
+.ant-form-item-control-input {
+  min-height: auto !important;
 }
 
 // Inputs
@@ -69,11 +74,11 @@ input {
   }
 }
 
-.btn-secondary {
+.ant-btn-secondary {
   background-color: #505f63;
   border: 1px solid #394447;
 
   &:hover {
-    background-color: #3a474b;
+    background-color: #3a474b !important;
   }
 }
