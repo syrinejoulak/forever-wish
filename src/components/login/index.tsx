@@ -1,13 +1,7 @@
-import React from 'react';
-
-import Image from 'next/image';
-import { Button, Form, Input, Label } from 'reactstrap';
-
-import flowers from '../../public/assets/login-image.png';
-import logo from '../../public/assets/logo.png';
+import { Button, Form, Input } from 'antd';
+import { Link } from 'react-router-dom';
 
 import styles from './login.module.scss';
-import Link from 'next/link';
 
 const LoginPage = () => {
   return (
@@ -17,22 +11,26 @@ const LoginPage = () => {
           <div className={styles.form_container__content}>
             <h1>Login</h1>
             <Form className={styles.form}>
-              <Label for='email'>Email</Label>
-              <Input id='email' name='email' placeholder='Entrez votre addresse mail...' type='email' />
+              <Form.Item label='Email'>
+                <Input id='email' name='email' placeholder='Entrez votre addresse mail...' type='email' />
+              </Form.Item>
 
-              <Label for='password'>Mot de passe</Label>
-              <Input id='password' name='email' placeholder='Entrez votre mot de passe...' type='password' />
+              <Form.Item label='Mot de passe'>
+                <Input id='password' name='email' placeholder='Entrez votre mot de passe...' type='password' />
+              </Form.Item>
+
               <div className='center'>
-                <Button color='primary'>Login</Button>
+                <Button type='primary'>Login</Button>
               </div>
             </Form>
+
             <div className='d-flex justify-content-between align-items-center mt-50'>
               <p>
-                Vous êtes déjà inscrit ? <Link href='/signup'>Connectez-vous ici</Link>.
+                Vous êtes déjà inscrit ? <Link to='/signup'>Connectez-vous ici</Link>.
               </p>
 
               <p>
-                <Link href='/reset-password'>Mot de passe oublié</Link>
+                <Link to='/reset-password'>Mot de passe oublié</Link>
               </p>
             </div>
           </div>
